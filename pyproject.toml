@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "clipfix"
+version = "0.1.0"
+description = "Remove visual hard-wraps from terminal-copied text"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+keywords = ["clipboard", "terminal", "text", "utility"]
+classifiers = [
+    "Environment :: Console",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/panshul/clipfix"
+Repository = "https://github.com/panshul/clipfix"
+Issues = "https://github.com/panshul/clipfix/issues"
+
+[project.scripts]
+clipfix = "clipfix:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/clipfix"]
